@@ -10,6 +10,14 @@ Last update: Thu Oct 15 15:32:51 JST 2015
 -	parse MacroLua like input from serial and output joystick command
 -	based on teensy cores (https://github.com/PaulStoffregen/cores) and teensy-template (https://github.com/apmorton/teensy-template)
 
+## hardware
+
+-	teensy3.1 * 1
+-	serial usb converter * 1
+-	tactile switch * 2
+-	jumper wire * n
+-	breadboard * 1
+
 ## macro
 
 ### buttons
@@ -27,11 +35,6 @@ press button on first frame and release on next frame
 -	8: button8
 -	9: button9
 
-### only press/release
-
--	_n: hold n button or direction
--	^n: release n button or direction
-
 ### directions
 
 -	U: upper
@@ -42,6 +45,11 @@ press button on first frame and release on next frame
 -	LD: lower left
 -	RU: upper right
 -	LU: upper left
+
+### only press/release
+
+-	_n: hold n button or direction
+-	^n: release n button or direction
 
 ### wait
 
@@ -61,12 +69,22 @@ press button on first frame and release on next frame
 -	U.W4.R,8.L,1,2.W2.R.W5.1.W16.4.: JDFC > dash > JK > JS
 -	_1,_2.W20.D.RU.W3.8.L.W1.^1,^2.: 2 buttons hold JDFC
 
-## build
+## how to use
+
+build
 
 ~~~
  $ make
- $ make upload
+ $ make upload # press teensy's reboot button
 ~~~
+
+send macro command to teensy like this
+
+~~~
+ $ echo "R.W2.R.W16.4.W18.RU.W1.8.L,1,2.W2.4." > /dev/ttyUSB0
+~~~
+
+then, push tactile switch (connected to 15 pin)!
 
 ## license
 
