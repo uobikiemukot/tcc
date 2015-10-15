@@ -10,6 +10,57 @@ Last update: Thu Oct 15 15:32:51 JST 2015
 -	parse MacroLua like input from serial and output joystick command
 -	based on teensy cores (https://github.com/PaulStoffregen/cores) and teensy-template (https://github.com/apmorton/teensy-template)
 
+## macro
+
+### buttons
+
+press button on first frame and release on next frame
+
+- 	S: start
+-	1: button1
+-	2: button2
+-	3: button3
+-	4: button4
+-	5: button5
+-	6: button6
+-	7: button7
+-	8: button8
+-	9: button9
+
+### only press/release
+
+-	_n: hold n button or direction
+-	^n: release n button or direction
+
+### directions
+
+-	U: upper
+-	L: left
+-	R: right
+-	D: down
+-	RD: lower right
+-	LD: lower left
+-	RU: upper right
+-	LU: upper left
+
+### wait
+
+-	Wn: wait n frame
+
+###  others
+
+-	.: 1 frame advance
+-	,: simultaneous input
+
+## macro samples
+
+-	R.D.RD.6.: shoryuken command
+-	D.RD.R.4.: hadouken command
+-	D.LD.L.1.: tatsumaki command
+-	R.W2.R.W16.4.W18.RU.W1.8.L,1,2.W2.4.: JS > JDFC > JS
+-	U.W4.R,8.L,1,2.W2.R.W5.1.W16.4.: JDFC > dash > JK > JS
+-	_1,_2.W20.D.RU.W3.8.L.W1.^1,^2.: 2 buttons hold JDFC
+
 ## build
 
 ~~~
