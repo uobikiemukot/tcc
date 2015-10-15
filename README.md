@@ -2,6 +2,8 @@
 
 Last update: Thu Oct 15 15:32:51 JST 2015
 
+![tcc_image](https://raw.githubusercontent.com/uobikiemukot/tcc/master/img/tcc_small.jpg)
+
 ## description
 
 -	teensy firmware for command controller
@@ -10,8 +12,10 @@ Last update: Thu Oct 15 15:32:51 JST 2015
 
 ## build
 
+~~~
  $ make
  $ make upload
+~~~
 
 ## license
 
